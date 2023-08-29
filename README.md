@@ -1,5 +1,26 @@
 
 > Open this page at [https://softsmyth.github.io/lectrify-b4k/](https://softsmyth.github.io/lectrify-b4k/)
+## Usage
+### DC motor control
+* supply direction (0 or 1) and 2 to stop followed by speed 0 to 1023
+```blocks
+input.onButtonPressed(Button.A, function () {
+    b4k.leftDCmotor(0, 1023)
+    b4k.rightDCmotor(0, 1023)
+    basic.pause(1000)
+    b4k.leftDCmotor(1, 1023)
+    b4k.rightDCmotor(1, 1023)
+    basic.pause(1000)
+    b4k.leftDCmotor(0, 1023)
+    b4k.rightDCmotor(1, 1023)
+    basic.pause(1000)
+    b4k.leftDCmotor(1, 1023)
+    b4k.rightDCmotor(0, 1023)
+    basic.pause(1000)
+    b4k.leftDCmotor(2, 1023)
+    b4k.rightDCmotor(2, 1023)
+})
+```
 
 ## Use as Extension
 
