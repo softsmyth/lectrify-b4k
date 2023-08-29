@@ -16,7 +16,7 @@ namespace b4k{
     //% rpwr.min=0 rpwr.max=1023
     export function rightDCmotor(rdir: number, rpwr: number) {
         pins.digitalWritePin(DigitalPin.P14, rdir);
-        pins.analogWritePin(AnalogPin.P12, rpwr);
+        pins.analogWritePin(AnalogPin.P15, rpwr);
     }
     export function leftServo(angle: number) {
         
