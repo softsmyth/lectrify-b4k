@@ -27,10 +27,18 @@ namespace b4k{
             pins.digitalWritePin(DigitalPin.P15, 0)
         }      
     }
-    export function leftServo(angle: number) {
-        
-    }
-    export function rightServo(angle: number) {
 
+    //% blockId=servo1
+    //% block="Servo 1 $ang1"
+    //% ang1.min=0 ang1.max=359
+    export function leftServo(ang1: number) {
+        pins.servoWritePin(AnalogPin.P1, ang1)
+    }
+
+    //% blockId=servo2
+    //% block="Servo 2 $ang2"
+    //% ang2.min=0 ang2.max=359
+    export function rightServo(ang2: number) {
+        pins.servoWritePin(AnalogPin.P2, ang2)
     }
 }
