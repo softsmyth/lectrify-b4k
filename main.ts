@@ -19,7 +19,7 @@ namespace b4k{
     //% block="DC Motor B $bdir, $bpwr"
     //% bdir.min=0 bdir.max=2
     //% bpwr.min=0 bpwr.max=1023
-    export function rightDCmotor(bdir: number, bpwr: number) {
+    export function motorB(bdir: number, bpwr: number) {
         pins.digitalWritePin(DigitalPin.P14, bdir);
         if (bdir<2){
             pins.analogWritePin(AnalogPin.P15, bpwr);
