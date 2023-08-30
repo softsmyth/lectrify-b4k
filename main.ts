@@ -30,15 +30,15 @@ namespace b4k{
 
     //% blockId=servo1
     //% block="Servo 1 $ang1"
-    //% ang1.min=0 ang1.max=359
+    //% ang1.min=0 ang1.max=360
     export function leftServo(ang1: number) {
-        pins.servoWritePin(AnalogPin.P1, ang1)
+        pins.servoWritePin(AnalogPin.P1, ang1 / 2)
     }
 
     //% blockId=servo2
     //% block="Servo 2 $ang2"
-    //% ang2.min=0 ang2.max=359
+    //% ang2.min=0 ang2.max=360
     export function rightServo(ang2: number) {
-        pins.servoWritePin(AnalogPin.P2, ang2)
+        pins.servoWritePin(AnalogPin.P2, ang2 / 2)
     }
 }
