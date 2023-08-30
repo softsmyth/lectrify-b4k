@@ -28,17 +28,17 @@ namespace b4k{
         }      
     }
 
-    //% blockId=servo1
+    //% blockId=servoOne
     //% block="Servo 1 $ang1"
     //% ang1.min=0 ang1.max=360
-    export function leftServo(ang1: number) {
+    export function servo1(ang1: number) {
         pins.servoWritePin(AnalogPin.P1, ang1 / 2)
     }
 
-    //% blockId=servo2
+    //% blockId=servoTwo
     //% block="Servo 2 $ang2"
     //% ang2.min=0 ang2.max=360
-    export function rightServo(ang2: number) {
+    export function servo2(ang2: number) {
         pins.servoWritePin(AnalogPin.P2, ang2 / 2)
     }
 }
