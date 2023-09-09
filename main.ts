@@ -1,5 +1,11 @@
 namespace b4k {
     /** b4k handler */
+    let dir_list: string[] = []
+    dir_list = ["Fwd", "Rev", "Stop"]
+
+    //% blockId=testblock
+    //% block="Test Selection $dir_list"
+            
     //% blockId=dcmotora
     //% block="DC Motor A $adir, $apwr"
     //% adir.min=0 adir.max=2
@@ -11,9 +17,10 @@ namespace b4k {
         } else {
             pins.digitalWritePin(DigitalPin.P12, 0)
         }
-        
+
     }
-    
+
+
     //% blockId=dcmotorb
     //% block="DC Motor B $bdir, $bpwr"
     //% bdir.min=0 bdir.max=2
