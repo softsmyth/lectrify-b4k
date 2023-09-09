@@ -1,16 +1,26 @@
+enum Scrolls {
+    //% block="Fwd"
+    Fwd = 0,
+    //% block="Rev"
+    Rev = 1,
+    //% block="Stop"
+    Stop = 2
+}
+
 namespace b4k {
     /** b4k handler */
-    let dir_list: string[] = []
-    dir_list = ["Fwd", "Rev", "Stop"]
 
-    //% blockId=testblock
-    //% block="Test Selection $dir_list"
-            
+    //% shim=TD_ID
+    //% blockId="dir_conv" block="%dir"
+    export function dirs(dir: Scrolls): number { 
+        return (dir || 0)
+        }
+
     //% blockId=dcmotora
     //% block="DC Motor A $adir, $apwr"
     //% adir.min=0 adir.max=2
     //% apwr.min=0 apwr.max=1023
-    export function motorA(adir: number, apwr: number) {
+    export function motorA(adir: Scrolls, apwr: number) {
         pins.digitalWritePin(DigitalPin.P13, adir)
         if (adir < 2) {
             pins.analogWritePin(AnalogPin.P12, apwr)
@@ -25,7 +35,7 @@ namespace b4k {
     //% block="DC Motor B $bdir, $bpwr"
     //% bdir.min=0 bdir.max=2
     //% bpwr.min=0 bpwr.max=1023
-    export function motorB(bdir: number, bpwr: number) {
+    export function motorB(bdir: Scrolls, bpwr: number) {
         pins.digitalWritePin(DigitalPin.P14, bdir)
         if (bdir < 2) {
             pins.analogWritePin(AnalogPin.P15, bpwr)
