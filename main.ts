@@ -10,12 +10,6 @@ enum Scrolls {
 namespace b4k {
     /** b4k handler */
 
-    //% shim=TD_ID
-    //% blockId="dir_conv" block="%dir"
-    export function dirs(dir: Scrolls): number { 
-        return (dir || 0)
-        }
-
     //% blockId=dcmotora
     //% block="DC Motor A $adir, $apwr"
     //% adir.min=0 adir.max=2
@@ -29,7 +23,6 @@ namespace b4k {
         }
 
     }
-
 
     //% blockId=dcmotorb
     //% block="DC Motor B $bdir, $bpwr"
