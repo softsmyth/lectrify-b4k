@@ -15,11 +15,11 @@ namespace b4k {
     //% adir.min=0 adir.max=2
     //% apwr.min=0 apwr.max=1023
     export function motorA(adir: Scrolls, apwr: number) {
-        pins.digitalWritePin(DigitalPin.P13, adir)
+        pins.digitalWritePin(DigitalPin.P14, adir)
         if (adir < 2) {
-            pins.analogWritePin(AnalogPin.P12, apwr)
+            pins.analogWritePin(AnalogPin.P15, apwr)
         } else {
-            pins.digitalWritePin(DigitalPin.P12, 0)
+            pins.digitalWritePin(DigitalPin.P15, 0)
         }
 
     }
@@ -29,11 +29,11 @@ namespace b4k {
     //% bdir.min=0 bdir.max=2
     //% bpwr.min=0 bpwr.max=1023
     export function motorB(bdir: Scrolls, bpwr: number) {
-        pins.digitalWritePin(DigitalPin.P14, bdir)
+        pins.digitalWritePin(DigitalPin.P13, bdir)
         if (bdir < 2) {
-            pins.analogWritePin(AnalogPin.P15, bpwr)
+            pins.analogWritePin(AnalogPin.P12, bpwr)
         } else {
-            pins.digitalWritePin(DigitalPin.P15, 0)
+            pins.digitalWritePin(DigitalPin.P12, 0)
         }
         
     }
