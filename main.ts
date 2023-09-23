@@ -27,7 +27,7 @@ namespace Bricks4Kidz {
     //% blockId=dcmotorb
     //% block="DC Motor B $bdir, $bpwr"
     //% bdir.min=0 bdir.max=2
-    //% bpwr.min=0 bpwr.max=1023
+    //% bpwr.min=0 bpwr.max=100
     export function motorB(bdir: Scrolls, bpwr: number) {
         pins.digitalWritePin(DigitalPin.P13, bdir)
         if (bdir < 2) {
