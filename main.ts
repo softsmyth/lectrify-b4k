@@ -13,11 +13,11 @@ namespace Bricks4Kidz {
     //% blockId=dcmotora
     //% block="DC Motor A $adir, $apwr"
     //% adir.min=0 adir.max=2
-    //% apwr.min=0 apwr.max=1023
+    //% apwr.min=0 apwr.max=100
     export function motorA(adir: Scrolls, apwr: number) {
         pins.digitalWritePin(DigitalPin.P14, adir)
         if (adir < 2) {
-            pins.analogWritePin(AnalogPin.P15, apwr)
+            pins.analogWritePin(AnalogPin.P15, pins.map(apwr, 0, 100, 0, 1023))
         } else {
             pins.digitalWritePin(DigitalPin.P15, 0)
         }
@@ -31,7 +31,7 @@ namespace Bricks4Kidz {
     export function motorB(bdir: Scrolls, bpwr: number) {
         pins.digitalWritePin(DigitalPin.P13, bdir)
         if (bdir < 2) {
-            pins.analogWritePin(AnalogPin.P12, bpwr)
+            pins.analogWritePin(AnalogPin.P12, pins.map(bpwr, 0, 100, 0, 1023))
         } else {
             pins.digitalWritePin(DigitalPin.P12, 0)
         }
