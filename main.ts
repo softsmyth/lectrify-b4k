@@ -7,8 +7,8 @@ enum Scrolls {
     Stop = 2
 }
 
-namespace b4k {
-    /** b4k handler */
+namespace Bricks4Kidz {
+    /** Bricks4Kidz handler */
 
     //% blockId=dcmotora
     //% block="DC Motor A $adir, $apwr"
