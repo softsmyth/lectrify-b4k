@@ -1,56 +1,49 @@
-enum Scrolls {
-    //% block="Fwd"
-    Fwd = 0,
-    //% block="Rev"
-    Rev = 1,
-    //% block="Stop"
-    Stop = 2
-}
-
 namespace Bricks4Kidz {
     /** Bricks4Kidz handler */
 
     //% blockId=dcmotora
-    //% block="DC Motor A $adir, $apwr"
-    //% adir.min=0 adir.max=2
-    //% apwr.min=0 apwr.max=100
-    export function motorA(adir: Scrolls, apwr: number) {
-        pins.digitalWritePin(DigitalPin.P14, adir)
-        if (adir < 2) {
+    //% block="DC Motor A $apwr"
+    //% apwr.min=-100 apwr.max=100
+    export function motorA(apwr: number) {
+        if (apwr < 0) {
+            pins.digitalWritePin(DigitalPin.P14, 0)
+            pins.analogWritePin(AnalogPin.P15, pins.map(apwr * -1, 0, 100, 0, 1023))
+        } else if (apwr > 0) {
+            pins.digitalWritePin(DigitalPin.P14, 1)
             pins.analogWritePin(AnalogPin.P15, pins.map(apwr, 0, 100, 0, 1023))
         } else {
             pins.digitalWritePin(DigitalPin.P15, 0)
         }
-
     }
 
     //% blockId=dcmotorb
-    //% block="DC Motor B $bdir, $bpwr"
-    //% bdir.min=0 bdir.max=2
-    //% bpwr.min=0 bpwr.max=100
-    export function motorB(bdir: Scrolls, bpwr: number) {
-        pins.digitalWritePin(DigitalPin.P13, bdir)
-        if (bdir < 2) {
+    //% block="DC Motor B $bpwr"
+    //% bpwr.min=-100 bpwr.max=100
+    export function motorB(bpwr: number) {
+        if(bpwr<0){
+            pins.digitalWritePin(DigitalPin.P13, 0)
+            pins.analogWritePin(AnalogPin.P12, pins.map(bpwr*-1, 0, 100, 0, 1023))
+        }else if(bpwr>0){
+            pins.digitalWritePin(DigitalPin.P13, 1)
             pins.analogWritePin(AnalogPin.P12, pins.map(bpwr, 0, 100, 0, 1023))
-        } else {
+        }else{
             pins.digitalWritePin(DigitalPin.P12, 0)
         }
-        
     }
-    
+
     //% blockId=servoOne
     //% block="Servo 1 $ang1"
-    //% ang1.min=0 ang1.max=360
+    //% ang1.min=-180 ang1.max=180
     export function servo1(ang1: number) {
-        pins.servoWritePin(AnalogPin.P1, ang1 / 2)
+        pins.servoWritePin(AnalogPin.P1, pins.map(ang1, -180, 180, 0, 180))
     }
-    
+
     //% blockId=servoTwo
     //% block="Servo 2 $ang2"
-    //% ang2.min=0 ang2.max=360
+    //% ang2.min=-180 ang2.max=180
     export function servo2(ang2: number) {
-        pins.servoWritePin(AnalogPin.P2, ang2 / 2)
+        pins.servoWritePin(AnalogPin.P2, pins.map(ang2, -180, 180, 0, 180))
     }
-    
+
 }
 
