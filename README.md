@@ -2,43 +2,43 @@
 > Open this page at [https://softsmyth.github.io/lectrify-b4k/](https://softsmyth.github.io/lectrify-b4k/)
 ## Usage
 ### DC motor control
-* supply direction as Fwd, Rev, or Stop followed by speed 0 to 100
+* supply direction and power as -100 to 100 where negative speed is reverse
 ```blocks
 input.onButtonPressed(Button.B, function () {
-    Bricks4Kidz.motorA(Scrolls.Fwd, 100)
-    Bricks4Kidz.motorB(Scrolls.Fwd, 100)
+    Bricks4Kidz.motorA(-100)
+    Bricks4Kidz.motorB(-100)
     basic.pause(2000)
-    Bricks4Kidz.motorA(Scrolls.Rev, 100)
-    Bricks4Kidz.motorB(Scrolls.Rev, 100)
+    Bricks4Kidz.motorA(100)
+    Bricks4Kidz.motorB(100)
     basic.pause(2000)
-    Bricks4Kidz.motorA(Scrolls.Fwd, 50)
-    Bricks4Kidz.motorB(Scrolls.Rev, 50)
+    Bricks4Kidz.motorA(-50)
+    Bricks4Kidz.motorB(50)
     basic.pause(2000)
-    Bricks4Kidz.motorA(Scrolls.Rev, 25)
-    Bricks4Kidz.motorB(Scrolls.Fwd, 25)
+    Bricks4Kidz.motorA(25)
+    Bricks4Kidz.motorB(-25)
     basic.pause(2000)
-    Bricks4Kidz.motorA(Scrolls.Stop, 25)
-    Bricks4Kidz.motorB(Scrolls.Stop, 25)
+    Bricks4Kidz.motorA(0)
+    Bricks4Kidz.motorB(0)
 })
 ```
 ### Servo control
-* supply an angle of 0 to 360
+* supply an angle of -180 to 180
 * note this block is specifically written to use 360 degree servos
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    Bricks4Kidz.servo1(360)
+    Bricks4Kidz.servo1(0)
+    basic.pause(2000)
+    Bricks4Kidz.servo1(-180)
     basic.pause(2000)
     Bricks4Kidz.servo1(180)
     basic.pause(2000)
-    Bricks4Kidz.servo1(90)
-    basic.pause(2000)
     Bricks4Kidz.servo1(0)
+    basic.pause(5000)
+    Bricks4Kidz.servo2(0)
     basic.pause(2000)
-    Bricks4Kidz.servo2(360)
+    Bricks4Kidz.servo2(-180)
     basic.pause(2000)
     Bricks4Kidz.servo2(180)
-    basic.pause(2000)
-    Bricks4Kidz.servo2(90)
     basic.pause(2000)
     Bricks4Kidz.servo2(0)
 })
