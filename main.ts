@@ -1,9 +1,6 @@
 namespace bricks4kidz {
     /** Bricks4Kidz handler */
-    /**
-     * Set Motor A direction and power
-     * power levels of 0 to 100, reverse direction is negative
-     */
+
     //% blockId=b4kdcmotora
     //% block="DC motor A direction and power $power"
     //% power.min=-100 power.max=100
@@ -22,7 +19,7 @@ namespace bricks4kidz {
     //% blockId=b4kdcmotorb
     //% block="DC motor B direction and power $power"
     //% power.min=-100 power.max=100
-    //% help=none
+    //% help=github:softsmyth.github.io/lectrify-b4k/README.md
     export function motorB(power: number) {
         if (power<0){
             pins.digitalWritePin(DigitalPin.P13, 0)
