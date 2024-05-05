@@ -2,7 +2,7 @@ namespace Bricks4Kidz {
     /** Bricks4Kidz handler */
 
     //% blockId=dcmotora
-    //% block="DC Motor A $power"
+    //% block="DC motor A direction and power $power"
     //% power.min=-100 power.max=100
     export function motorA(power: number) {
         if (power < 0) {
@@ -17,7 +17,7 @@ namespace Bricks4Kidz {
     }
 
     //% blockId=dcmotorb
-    //% block="DC Motor B $power"
+    //% block="DC motor B direction and power $power"
     //% bpwr.min=-100 bpwr.max=100
     export function motorB(power: number) {
         if (power<0){
@@ -31,18 +31,32 @@ namespace Bricks4Kidz {
         }
     }
 
-    //% blockId=servoOne
-    //% block="Servo 1 $angle"
+    //% blockId=360servoOne
+    //% block="360 servo 1 relative angle $angle"
     //% angle.min=-180 angle.max=180
-    export function servo1(angle: number) {
+    export function servo3601(angle: number) {
         pins.servoWritePin(AnalogPin.P1, pins.map(angle, -180, 180, 0, 180))
     }
 
-    //% blockId=servoTwo
-    //% block="Servo 2 $angle"
+    //% blockId=360servoTwo
+    //% block="360 servo 2 relative angle $angle"
     //% angle.min=-180 angle.max=180
-    export function servo2(angle: number) {
+    export function servo3602(angle: number) {
         pins.servoWritePin(AnalogPin.P2, pins.map(angle, -180, 180, 0, 180))
+    }
+
+    //% blockId=180servoOne
+    //% block="180 servo 1 relative angle $angle"
+    //% angle.min=-90 angle.max=90
+    export function servo1801(angle: number) {
+        pins.servoWritePin(AnalogPin.P1, pins.map(angle, -90, 90, 0, 180))
+    }
+
+    //% blockId=180servoTwo
+    //% block="180 servo 2 relative angle $angle"
+    //% angle.min=-90 angle.max=90
+    export function servo1802(angle: number) {
+        pins.servoWritePin(AnalogPin.P2, pins.map(angle, -90, 90, 0, 180))
     }
 
 }
