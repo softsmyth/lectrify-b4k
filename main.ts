@@ -1,9 +1,9 @@
 namespace bricks4kidz {
     /** Bricks4Kidz handler */
-    //% help=github:softsmyth.github.io/lectrify-b4k/
     //% blockId=b4kdcmotora
     //% block="DC motor A direction and power $power"
     //% power.min=-100 power.max=100
+    //% help=github:softsmyth.github.io/lectrify-b4k/
     export function motorA(power: number) {
         if (power < 0) {
             pins.digitalWritePin(DigitalPin.P14, 0)
@@ -19,6 +19,7 @@ namespace bricks4kidz {
     //% blockId=b4kdcmotorb
     //% block="DC motor B direction and power $power"
     //% power.min=-100 power.max=100
+    //% help=none
     export function motorB(power: number) {
         if (power<0){
             pins.digitalWritePin(DigitalPin.P13, 0)
