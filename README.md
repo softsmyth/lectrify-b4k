@@ -26,21 +26,21 @@ input.onButtonPressed(Button.B, function () {
 * note this block is specifically written to use 360 degree servos
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    bricks4kidz.servo1(0)
+    bricks4kidz.servo3601(0)
     basic.pause(2000)
-    bricks4kidz.servo1(-180)
+    bricks4kidz.servo3601(-180)
     basic.pause(2000)
-    bricks4kidz.servo1(180)
+    bricks4kidz.servo3601(180)
     basic.pause(2000)
-    bricks4kidz.servo1(0)
+    bricks4kidz.servo3601(0)
     basic.pause(5000)
-    bricks4kidz.servo2(0)
+    bricks4kidz.servo1802(0)
     basic.pause(2000)
-    bricks4kidz.servo2(-180)
+    bricks4kidz.servo1802(-90)
     basic.pause(2000)
-    bricks4kidz.servo2(180)
+    bricks4kidz.servo1802(90)
     basic.pause(2000)
-    bricks4kidz.servo2(0)
+    bricks4kidz.servo1802(0)
 })
 ```
 
