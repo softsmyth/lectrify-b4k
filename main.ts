@@ -18,7 +18,7 @@ namespace bricks4kidz {
 
     //% blockId=b4kdcmotorb
     //% block="DC motor B direction and power $power"
-    //% bpwr.min=-100 bpwr.max=100
+    //% power.min=-100 power.max=100
     export function motorB(power: number) {
         if (power<0){
             pins.digitalWritePin(DigitalPin.P13, 0)
