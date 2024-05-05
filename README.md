@@ -5,20 +5,20 @@
 * supply direction and power as -100 to 100 where negative speed is reverse
 ```blocks
 input.onButtonPressed(Button.B, function () {
-    Bricks4Kidz.motorA(-100)
-    Bricks4Kidz.motorB(-100)
+    bricks4kidz.motorA(-100)
+    bricks4kidz.motorB(-100)
     basic.pause(2000)
-    Bricks4Kidz.motorA(100)
-    Bricks4Kidz.motorB(100)
+    bricks4kidz.motorA(100)
+    bricks4kidz.motorB(100)
     basic.pause(2000)
-    Bricks4Kidz.motorA(-50)
-    Bricks4Kidz.motorB(50)
+    bricks4kidz.motorA(-50)
+    bricks4kidz.motorB(50)
     basic.pause(2000)
-    Bricks4Kidz.motorA(25)
-    Bricks4Kidz.motorB(-25)
+    bricks4kidz.motorA(25)
+    bricks4kidz.motorB(-25)
     basic.pause(2000)
-    Bricks4Kidz.motorA(0)
-    Bricks4Kidz.motorB(0)
+    bricks4kidz.motorA(0)
+    bricks4kidz.motorB(0)
 })
 ```
 ### Servo control
@@ -26,21 +26,21 @@ input.onButtonPressed(Button.B, function () {
 * note this block is specifically written to use 360 degree servos
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    Bricks4Kidz.servo1(0)
+    bricks4kidz.servo1(0)
     basic.pause(2000)
-    Bricks4Kidz.servo1(-180)
+    bricks4kidz.servo1(-180)
     basic.pause(2000)
-    Bricks4Kidz.servo1(180)
+    bricks4kidz.servo1(180)
     basic.pause(2000)
-    Bricks4Kidz.servo1(0)
+    bricks4kidz.servo1(0)
     basic.pause(5000)
-    Bricks4Kidz.servo2(0)
+    bricks4kidz.servo2(0)
     basic.pause(2000)
-    Bricks4Kidz.servo2(-180)
+    bricks4kidz.servo2(-180)
     basic.pause(2000)
-    Bricks4Kidz.servo2(180)
+    bricks4kidz.servo2(180)
     basic.pause(2000)
-    Bricks4Kidz.servo2(0)
+    bricks4kidz.servo2(0)
 })
 ```
 
