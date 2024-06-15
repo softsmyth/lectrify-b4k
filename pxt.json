@@ -1,5 +1,5 @@
 {
-    "name": "Bricks4Kidz",
+    "name": "bricks4kidz",
     "version": "1.3.1",
     "description": "microBit expansion board, Bricks4Kidz supports DC and Servo motors.",
     "dependencies": {
