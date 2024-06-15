@@ -4,7 +4,7 @@
 ### BrickBit
 * Can be ordered here: [https://www.lectrify.it/products/brickbit](https://www.lectrify.it/products/brickbit)
 ## Usage
-### DC motor control #motora
+### DC motor control #bricks4kidz-motora
 * supply direction and power as -100 to 100 where negative speed is reverse
 ```blocks
 input.onButtonPressed(Button.B, function () {
