@@ -1,4 +1,5 @@
 /** bricks4kidz handler */
+//% icon="\uf1b3"
 namespace bricks4kidz {
     /**
      * DC motor A direction and power. @param power from 0 to 100 with - sign indicating reverse direction
