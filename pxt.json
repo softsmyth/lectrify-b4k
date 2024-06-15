@@ -4,8 +4,7 @@
     "description": "microBit expansion board, Bricks4Kidz supports DC and Servo motors.",
     "dependencies": {
         "core": "*",
-        "radio": "*",
-        "microphone": "*"
+        "radio": "*"
     },
     "files": [
         "main.ts",
