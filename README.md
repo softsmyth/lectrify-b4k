@@ -1,5 +1,8 @@
 
 > Open this page at [https://softsmyth.github.io/lectrify-b4k/](https://softsmyth.github.io/lectrify-b4k/)
+## Where to obtain
+### BrickBit
+* Can be ordered here: [https://www.lectrify.it/products/brickbit](https://www.lectrify.it/products/brickbit)
 ## Usage
 ### DC motor control
 * supply direction and power as -100 to 100 where negative speed is reverse
