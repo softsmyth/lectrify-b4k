@@ -1,6 +1,10 @@
 namespace bricks4kidz {
     /** Bricks4Kidz handler */
 
+    /**
+     * DC motor A direction and power.
+     * @param power from 0 to 100 with - sign indicating reverse direction
+     */
     //% blockId=b4kdcmotora
     //% block="DC motor A direction and power $power"
     //% power.min=-100 power.max=100
