@@ -2,7 +2,8 @@
 //% icon="\uf1b3"
 namespace bricks4kidz {
     /**
-     * DC motor A direction and power. Parameter power from 0 to 100 with - sign indicating reverse direction
+     * DC motor A direction and power. 
+     * @param power from 0 to 100 with - sign indicating reverse direction
      */
     //% blockId=b4kdcmotora
     //% block="DC motor A direction and power $power"
@@ -20,12 +21,12 @@ namespace bricks4kidz {
     }
 
     /**
-     * DC motor B direction and power. Parameter power from 0 to 100 with - sign indicating reverse direction
+     * DC motor B direction and power.
+     * @param power from 0 to 100 with - sign indicating reverse direction
      */
     //% blockId=b4kdcmotorb
     //% block="DC motor B direction and power $power"
     //% power.min=-100 power.max=100
-    //% help=github:softsmyth.github.io/lectrify-b4k/README.md
     export function motorB(power: number) {
         if (power<0){
             pins.digitalWritePin(DigitalPin.P13, 0)
@@ -39,7 +40,8 @@ namespace bricks4kidz {
     }
 
     /**
-     * 360 degree Servo 1 positioning. Parameter angle from -180 to 180
+     * 360 degree Servo 1 positioning. 
+     * @param angle from -180 to 180
      */
     //% blockId=b4k360servoOne
     //% block="360 servo 1 relative angle $angle"
@@ -49,7 +51,8 @@ namespace bricks4kidz {
     }
 
     /**
-     * 360 degree Servo 2 positioning. Parameter angle from -180 to 180
+     * 360 degree Servo 2 positioning.
+     * @param angle from -180 to 180
      */
     //% blockId=b4k360servoTwo
     //% block="360 servo 2 relative angle $angle"
@@ -59,7 +62,8 @@ namespace bricks4kidz {
     }
 
     /**
-     * 180 degree Servo 1 positioning. Parameter angle from -90 to 90
+     * 180 degree Servo 1 positioning.
+     * @param angle from -90 to 90
      */
     //% blockId=b4k180servoOne
     //% block="180 servo 1 relative angle $angle"
@@ -69,7 +73,8 @@ namespace bricks4kidz {
     }
 
     /**
-     * 180 degree Servo 2 positioning. Parameter angle from -90 to 90
+     * 180 degree Servo 2 positioning.
+     * @param angle from -90 to 90
      */
      //% blockId=b4k180servoTwo
     //% block="180 servo 2 relative angle $angle"
