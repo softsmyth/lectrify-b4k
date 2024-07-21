@@ -25,23 +25,24 @@ input.onButtonPressed(Button.B, function () {
 })
 ```
 ### Servo control
-* supply an angle of -180 to 180
-* note this block is specifically written to use 360 degree servos
+* supply an angle of 0 to 360 for servo 360
+* supply an angle of 0 to 180 for servo 180
+* note servo 360 block is specifically written to use 360 degree servos
 ```blocks
 input.onButtonPressed(Button.A, function () {
     bricks4kidz.servo3601(0)
     basic.pause(2000)
-    bricks4kidz.servo3601(-180)
-    basic.pause(2000)
     bricks4kidz.servo3601(180)
+    basic.pause(2000)
+    bricks4kidz.servo3601(360)
     basic.pause(2000)
     bricks4kidz.servo3601(0)
     basic.pause(5000)
     bricks4kidz.servo1802(0)
     basic.pause(2000)
-    bricks4kidz.servo1802(-90)
-    basic.pause(2000)
     bricks4kidz.servo1802(90)
+    basic.pause(2000)
+    bricks4kidz.servo1802(180)
     basic.pause(2000)
     bricks4kidz.servo1802(0)
 })
