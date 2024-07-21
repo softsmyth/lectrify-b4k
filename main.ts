@@ -1,5 +1,5 @@
 /** bricks4kidz handler */
-//% icon="\uf1b3"
+//% icon="\uf1b3" color=#0000FF
 namespace bricks4kidz {
     /**
      * DC motor A direction and power. 
@@ -41,46 +41,46 @@ namespace bricks4kidz {
 
     /**
      * 360 degree Servo 1 positioning. 
-     * @param angle from -180 to 180
+     * @param angle from 0 to 360
      */
     //% blockId=b4k360servoOne
-    //% block="360 servo 1 relative angle $angle"
-    //% angle.min=-180 angle.max=180
+    //% block="360 servo 1 angle $angle"
+    //% angle.min=0 angle.max=360
     export function servo3601(angle: number) {
-        pins.servoWritePin(AnalogPin.P1, pins.map(angle, -180, 180, 0, 180))
+        pins.servoWritePin(AnalogPin.P1, pins.map(angle, 0, 360, 0, 180))
     }
 
     /**
      * 360 degree Servo 2 positioning.
-     * @param angle from -180 to 180
+     * @param angle from 0 to 360
      */
     //% blockId=b4k360servoTwo
-    //% block="360 servo 2 relative angle $angle"
-    //% angle.min=-180 angle.max=180
+    //% block="360 servo 2 angle $angle"
+    //% angle.min=0 angle.max=360
     export function servo3602(angle: number) {
-        pins.servoWritePin(AnalogPin.P2, pins.map(angle, -180, 180, 0, 180))
+        pins.servoWritePin(AnalogPin.P2, pins.map(angle, 0, 360, 0, 180))
     }
 
     /**
      * 180 degree Servo 1 positioning.
-     * @param angle from -90 to 90
+     * @param angle from 0 to 180
      */
     //% blockId=b4k180servoOne
-    //% block="180 servo 1 relative angle $angle"
-    //% angle.min=-90 angle.max=90
+    //% block="180 servo 1 angle $angle"
+    //% angle.min=0 angle.max=180
     export function servo1801(angle: number) {
-        pins.servoWritePin(AnalogPin.P1, pins.map(angle, -90, 90, 0, 180))
+        pins.servoWritePin(AnalogPin.P1, pins.map(angle, 0, 180, 0, 180))
     }
 
     /**
      * 180 degree Servo 2 positioning.
-     * @param angle from -90 to 90
+     * @param angle from 0 to 180
      */
      //% blockId=b4k180servoTwo
-    //% block="180 servo 2 relative angle $angle"
-    //% angle.min=-90 angle.max=90
+    //% block="180 servo 2 angle $angle"
+    //% angle.min=0 angle.max=180
     export function servo1802(angle: number) {
-        pins.servoWritePin(AnalogPin.P2, pins.map(angle, -90, 90, 0, 180))
+        pins.servoWritePin(AnalogPin.P2, pins.map(angle, 0, 180, 0, 180))
     }
 
 }

@@ -7,20 +7,20 @@ bricks4kidz.motorB(-100);
 //The following will test the DC motors A and B stop
 bricks4kidz.motorA(0);
 bricks4kidz.motorB(0);
-//Position 360 degree servo 1 to center point of 180 degrees
+//Position 360 degree servo 1 to 0 degrees
 bricks4kidz.servo3601(0);
 basic.pause(1000);
-//Rotate 360 degree servo 1 counter-clockwise 180 degrees relative to center position
-bricks4kidz.servo3601(-180);
-basic.pause(1000);
-//Rotate 360 degree servo 1 clockwise 180 degrees relative to center position
+//Rotate 360 degree servo 1 to 180 degrees
 bricks4kidz.servo3601(180);
 basic.pause(1000);
-//Position 180 degree servo 2 to center point of 90 degrees
+//Rotate 360 degree servo 1 to 360 degrees
+bricks4kidz.servo3601(360);
+basic.pause(1000);
+//Position 180 degree servo 2 to 0 degrees
 bricks4kidz.servo1802(0);
 basic.pause(1000);
-//Rotate 180 degree servo 2 counter-clockwise 90 degrees relative to center position
-bricks4kidz.servo1802(-90);
-basic.pause(1000);
-//Rotate 180 degree servo 2 clockwise 90 degrees relative to center position
+//Rotate 180 degree servo 2 to 90 degrees
 bricks4kidz.servo1802(90);
+basic.pause(1000);
+//Rotate 180 degree servo 2 to 180 degrees
+bricks4kidz.servo1802(180);
